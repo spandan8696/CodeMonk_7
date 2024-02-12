@@ -1,0 +1,88 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70vh;
+  }
+  
+  
+  .cardButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b9b4ac;
+    color: #fff;
+    font-size: 16px;
+    width: 50vh;
+    height: 50vh;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(179, 164, 164, 0.5);
+    margin-top: -130vh;
+    
+  }
+  
+  .modalContent {
+    padding: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    width: 150vh;
+    height: 80vh;
+  }
+  
+  .answerArea {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+  
+  .questionArea{
+    transform: translateY(500%);
+  }
+  
+  .question{
+    width: 130vh;
+    height: 30px;
+    margin-right: 30px;
+  }
+  
+  .answerText {
+    word-wrap: break-word;
+    padding-bottom: 130px;
+  }
+  
+  .submitButton {
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    width: 90px;
+    height: 30px;
+  }
+  
+  .closeButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 135vh;
+    transform: translateY(-60%);
+  }

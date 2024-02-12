@@ -1,0 +1,62 @@
+// Import necessary libraries
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import './ChatBox.css'; // Import the corresponding CSS file
+
+// Define a functional component for a single message bubble
+const MessageBubble = ({ message, isUser }) => {
+  return (
+    <motion.div
+      className={`message-bubble ${isUser ? 'user' : 'chatbot'}`}
+      initial={{ opacity: 0, x: isUser ? '100%' : '-100%' }}
+      animate={{ opacity: 1, x: '0%' }}
+      exit={{ opacity: 0, x: isUser ? '100%' : '-100%' }}
+    >
+      {message}  
+    </motion.div>
+  );
+};
+
+// Define the main ChatGPT component
+const ChatBox = () => {
+  const [messages, setMessages] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSendMessage = () => {
+    if (inputValue.trim() !== '') {
+      setMessages([...messages, { text: inputValue, isUser: true }]);
+      setInputValue('');
+      // Assume there's an asynchronous call to get the chatbot response
+      // Simulate it with a timeout
+      setTimeout(() => {
+        setMessages([...messages, { text: 'Chatbot response...', isUser: false }]);
+      }, 500);
+    }
+  };
+
+  return (
+    <div className="chatgpt-container">
+      <div className="chatgpt-header">
+        <h1>ChatGPT</h1>
+      </div>
+      <div className="chatgpt-chat-area">
+        <AnimatePresence>
+          {messages.map((msg, index) => (
+            <MessageBubble key={index} message={msg.text} isUser={msg.isUser} />
+          ))}
+        </AnimatePresence>
+      </div>
+      <div className="chatgpt-input-container">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="Type your message..."
+        />
+        <button onClick={handleSendMessage}>Send</button>
+      </div>
+    </div>
+  );
+};
+
+export default ChatBox;

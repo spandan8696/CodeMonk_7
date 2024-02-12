@@ -1,0 +1,85 @@
+.header {
+  background: linear-gradient(to bottom, #8e9ce9, white);
+  height: 100vh;
+}
+
+.plane {
+  margin-top: 30vh;
+  margin-left: 10vh;
+  z-index: 80px;
+}
+
+.n-name {
+  margin-top: -300px;
+}
+
+.n-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background-color: rgba(183, 174, 174, 0.5); */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(188, 180, 180, 0.1);
+}
+
+.n-right {
+  display: flex;
+  position: relative;
+}
+
+.n-right ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.n-right ul li {
+  list-style: none;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.n-right ul li:hover {
+  color: #4f5155;
+  transform: scale(1.1);
+  border-bottom: 1px solid #000000;
+}
+
+.n-right ul li {
+  padding-bottom: 5px;
+}
+
+.black-line {
+  background-color: black;
+  height: 1px;
+  width: 80%;
+  margin-top: 55vh;
+  margin-left: 20vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Button {
+  margin-top: -60px;
+  margin-right: 90px;
+}
+
+.Button button {
+  background: #000;
+  width: 140px;
+  height: 50px;
+  border-radius: 90px;
+  color: aliceblue;
+}
